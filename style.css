@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+}
+body div{
+    width: 700px;
+    height: 700px;
+}
+#main{
+    display: grid;
+    grid-template-areas: "header header header"
+                         "nav nav nav "
+                         "section section section";
+    grid-template-rows: 220px 220px 220px;
+    grid-gap: 10px;
+}
+
+header #NO{
+    grid-area: header;
+    background-color: blue;
+
+}
+header #N{
+    grid-area: header;
+    background-color: blue;
+
+}
+header #NE{
+    grid-area: header;
+    background-color: blue;
+
+}
+
+nav #O{
+    grid-area: nav;
+    background-color: red;
+
+}
+nav #C{
+    grid-area: nav;
+    background-color: red;
+
+}
+nav #L{
+    grid-area: nav;
+    background-color: red;
+
+}
+section #SO{
+    grid-area: section;
+    background-color: green;
+}
+section #S{
+    grid-area: section;
+    background-color: green;
+}
+section #SE{
+    grid-area: section;
+    background-color: green;
+}
+
+
