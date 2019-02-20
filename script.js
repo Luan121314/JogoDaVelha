@@ -1,17 +1,19 @@
-let blocoDoJogo = document.querySelectorAll("div");
-console.log(blocoDoJogo);
-
-for(let i =0; i < blocoDoJogo.length;i++){
-
-    
+let divs = document.querySelectorAll(".linhas div")
+console.log(divs);
+let quem = 0
+   
+for(let i = 0; i < divs.length; i++){
+    divs[i].addEventListener("click", function(){
+        seleciona(i);
+    });
 }
+function seleciona(indice){
+    let antiDuplicidade;
+    // for(let i = 0; divs.length; i++){
+    //     if(indice ==)
+    // }
+    divs[indice].style.backgroundColor = "blue";
 
-
-document.querySelectorAll("div").addEventListener("click", function seleciona(){
-    console.log("Ta na função");
-    document.getElementById("div").innerHTML = "Paragraph changed!";
-});
-
-document.getElementById("myBtn").addEventListener("click", function(){
-    document.getElementById("demo").innerHTML = "Hello World";
-  });
+    console.log(indice);
+   
+}
