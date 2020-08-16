@@ -1,19 +1,28 @@
-let divs = document.querySelectorAll(".linhas div")
-console.log(divs);
-let quem = 0
-   
-for(let i = 0; i < divs.length; i++){
-    divs[i].addEventListener("click", function(){
-        seleciona(i);
+let btnNewGame = document.querySelector('#btnNewGame')
+let squares = document.querySelectorAll(".painting");
+let squareChildrens = [];
+const jogo = new JogoDaVelha("benedito", "Joarez")
+
+btnNewGame.addEventListener('click', () => {
+    jogo.iniciar()
+})
+squares.forEach(squareItem => {
+    squareChildrens = [...squareChildrens, squareItem.firstElementChild]
+})
+
+
+for (let i = 0; i < squares.length; i++) {
+    squares[i].addEventListener("click", function () {
+        jogo.jogar(i, squareChildrens[i]);
+
     });
 }
-function seleciona(indice){
-    let antiDuplicidade;
-    // for(let i = 0; divs.length; i++){
-    //     if(indice ==)
-    // }
-    divs[indice].style.backgroundColor = "blue";
 
-    console.log(indice);
-   
-}
+
+let cont =0;
+
+setInterval(()=>{
+    document.querySelector('body').style.backgroundImage = `linear-gradient(${cont}deg, rgb(204, 204, 204), rgb(150, 150, 150))`
+    cont++;
+}, 120)
+
