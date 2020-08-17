@@ -88,3 +88,8 @@ section{
     transform: translateX(-50%);
     transform: rotateZ(45deg);
 }
+
+.winnerColor{
+    background-color:rgba(0, 255, 0, 0.74);
+    transition: 2s;
+}
