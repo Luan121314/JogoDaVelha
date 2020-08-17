@@ -31,6 +31,7 @@ class JogoDaVelha {
         const allSquareSelecteds = this.squareSelecteds.includes(indiceSquareSelected);
 
         if (this.squareSelecteds.length > 8) {
+            alert('Empate !')
             return
         }
 
@@ -46,7 +47,7 @@ class JogoDaVelha {
             this.availableWinner(this.squareSelectedsPlay1, winner, (res) => {
                 res ? this.winnerPlayer.playerGameWinned = this.player1.name : {}
                 this.winnerPlayer.gameWinned = true
-                console.log('player 1 vencedor')
+               alert('player 1 vencedor')
                 return
             })
 
@@ -57,7 +58,7 @@ class JogoDaVelha {
             this.availableWinner(this.squareSelectedsPlay2, winner, (res) => {
                 res ? this.winnerPlayer.playerGameWinned = this.player2.name : {}
                 this.winnerPlayer.gameWinned = true
-                console.log('player 2 vencedor')
+                alert('player 2 vencedor')
                 return
             })
 
